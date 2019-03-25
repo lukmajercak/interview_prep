@@ -15,7 +15,7 @@ import java.util.Set;
  * Bonus: Can you do this in one pass?
  */
 
-public class Daily_02_20_2019 {
+public class AddUpToK {
 
   public static void main(String[] args) {
     List<Integer> numbers = new ArrayList();

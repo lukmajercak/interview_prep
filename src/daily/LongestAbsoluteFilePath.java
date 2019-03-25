@@ -3,7 +3,7 @@ package daily;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class Daily_03_08_2019 {
+public class LongestAbsoluteFilePath {
 
   /**
    * This problem was asked by Google.
@@ -45,7 +45,7 @@ public class Daily_03_08_2019 {
    * The name of a directory or sub-directory will not contain a period.
    */
   public static void main(String[] args) {
-    Daily_03_08_2019 solution = new Daily_03_08_2019();
+    LongestAbsoluteFilePath solution = new LongestAbsoluteFilePath();
 
     System.out.println(solution.findLongest(
       "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));

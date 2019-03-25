@@ -3,7 +3,7 @@ package daily;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Daily_03_09_2019 {
+public class MaxOfEachSubarrayOfLengthK {
 
   /**
    * This problem was asked by Google.
@@ -20,7 +20,7 @@ public class Daily_03_09_2019 {
    * You can simply print them out as you compute them.
    */
   public static void main(String[] args) {
-    Daily_03_09_2019 solution = new Daily_03_09_2019();
+    MaxOfEachSubarrayOfLengthK solution = new MaxOfEachSubarrayOfLengthK();
 
     int[] numbers = new int[]{10, 5, 2, 7, 8, 7};
     solution.printMaximums(numbers, 3);

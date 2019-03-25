@@ -1,11 +1,10 @@
 package daily;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Daily_03_12_2019 {
+public class MinimumMeetingRooms {
 
   /**
    * This problem was asked by Snapchat.
@@ -16,7 +15,7 @@ public class Daily_03_12_2019 {
    * For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
    */
   public static void main(String[] args) {
-    Daily_03_12_2019 solution = new Daily_03_12_2019();
+    MinimumMeetingRooms solution = new MinimumMeetingRooms();
 
     // [(30, 75), (0, 50), (60, 150)]
     // return 2

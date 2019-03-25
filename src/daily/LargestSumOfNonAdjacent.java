@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Daily_02_28_2019 {
+public class LargestSumOfNonAdjacent {
 
   /**
    * This problem was asked by Airbnb.

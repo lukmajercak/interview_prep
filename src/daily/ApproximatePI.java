@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
 
-public class Daily_03_05_2019 {
+public class ApproximatePI {
 
   static Random r = new Random();
 

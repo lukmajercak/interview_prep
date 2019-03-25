@@ -3,7 +3,7 @@ package daily;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Daily_03_04_2019 {
+public class SubstringAtMostKDistinct {
 
   /**
    * This problem was asked by Amazon.

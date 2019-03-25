@@ -23,7 +23,7 @@ import java.util.Stack;
  * node = Node('root', Node('left', Node('left.left')), Node('right'))
  * assert deserialize(serialize(node)).left.left.val == 'left.left'
  */
-public class Daily_02_22_2019 {
+public class SerializeDeserializeBinaryTree {
 
   public static void main(String[] args) {
 

@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Daily_03_03_2019 {
+public class UniqueWaysToClimbStairs {
 
   /**
    * There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a time.

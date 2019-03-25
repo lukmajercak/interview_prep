@@ -3,7 +3,7 @@ package daily;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Daily_02_26_2019 {
+public class NumWaysToDecode {
 
   /**
    * This problem was asked by Facebook.

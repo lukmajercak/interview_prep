@@ -2,7 +2,7 @@ package daily;
 
 import java.util.Random;
 
-public class Daily_03_06_2019 {
+public class PickRandomFromInfiniteStream {
 
   /**
    * This problem was asked by Facebook.
@@ -33,12 +33,8 @@ public class Daily_03_06_2019 {
 
     int selectRandom(int x) {
       count++;
-      if (count == 1) {
+      if (r.nextInt(count) == count - 1) {
         res = x;
-      } else {
-        if (r.nextInt(count) == count - 1) {
-          res = x;
-        }
       }
       return res;
     }

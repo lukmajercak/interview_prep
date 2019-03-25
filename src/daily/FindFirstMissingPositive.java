@@ -2,7 +2,7 @@ package daily;
 
 import java.util.Arrays;
 
-public class Daily_02_23_2019 {
+public class FindFirstMissingPositive {
 
   /**
    * Given an array of integers, find the first missing positive integer in linear time and constant space.

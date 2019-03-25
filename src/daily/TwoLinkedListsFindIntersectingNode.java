@@ -1,6 +1,6 @@
 package daily;
 
-public class Daily_03_11_2019 {
+public class TwoLinkedListsFindIntersectingNode {
 
   /**
    * This problem was asked by Google.
@@ -14,7 +14,7 @@ public class Daily_03_11_2019 {
    * Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.
    */
   public static void main(String[] args) {
-    Daily_03_11_2019 solution = new Daily_03_11_2019();
+    TwoLinkedListsFindIntersectingNode solution = new TwoLinkedListsFindIntersectingNode();
 
     /**
      * A = 3 -> 7 -> 8 -> 10

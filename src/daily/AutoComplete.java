@@ -2,7 +2,7 @@ package daily;
 
 import java.util.*;
 
-public class Daily_03_02_2019 {
+public class AutoComplete {
 
   /**
    * This problem was asked by Twitter.

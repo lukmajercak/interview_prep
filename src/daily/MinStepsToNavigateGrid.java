@@ -2,7 +2,7 @@ package daily;
 
 import java.util.*;
 
-public class Daily_03_14_2019 {
+public class MinStepsToNavigateGrid {
 
   /**
    * This problem was asked by Google.
@@ -25,7 +25,7 @@ public class Daily_03_14_2019 {
    * required to reach the end is 7, since we would need to go through (1, 2) because there is a wall everywhere else on the second row.
    */
   public static void main(String[] args) {
-    Daily_03_14_2019 solution = new Daily_03_14_2019();
+    MinStepsToNavigateGrid solution = new MinStepsToNavigateGrid();
 
     // return 7
     boolean[][] board = new boolean[][] {

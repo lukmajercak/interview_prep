@@ -1,6 +1,6 @@
 package daily;
 
-public class Daily_03_16_2019 {
+public class RegExpMatching {
 
   /**
    * This problem was asked by Facebook.
@@ -19,7 +19,7 @@ public class Daily_03_16_2019 {
    * The same regular expression on the string "chats" should return false.
    */
   public static void main(String[] args) {
-    Daily_03_16_2019 solution = new Daily_03_16_2019();
+    RegExpMatching solution = new RegExpMatching();
 
     System.out.println(solution.matches("ra.", "ray"));     // true
     System.out.println(solution.matches("ra.", "raymond")); // false

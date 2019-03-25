@@ -1,6 +1,6 @@
 package daily;
 
-public class Daily_03_15_2019 {
+public class LockBinaryTree {
 
   /**
    * This problem was asked by Google.

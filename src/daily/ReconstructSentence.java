@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Daily_03_13_2019 {
+public class ReconstructSentence {
 
   /**
    * This problem was asked by Microsoft.
@@ -21,7 +21,7 @@ public class Daily_03_13_2019 {
    * return either ['bed', 'bath', 'and', 'beyond] or ['bedbath', 'and', 'beyond'].
    */
   public static void main(String[] args) {
-    Daily_03_13_2019 solution = new Daily_03_13_2019();
+    ReconstructSentence solution = new ReconstructSentence();
 
     Set<String> words = new HashSet<>();
     words.add("quick");

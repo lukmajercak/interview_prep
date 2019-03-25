@@ -1,6 +1,6 @@
 package daily;
 
-public class Daily_03_07_2019 {
+public class CircularQueueNthLastAdded {
 
   /**
    * This problem was asked by Twitter.

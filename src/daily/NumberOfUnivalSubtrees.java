@@ -3,7 +3,7 @@ package daily;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Daily_02_27_2019 {
+public class NumberOfUnivalSubtrees {
 
   static class Node {
     Node left;

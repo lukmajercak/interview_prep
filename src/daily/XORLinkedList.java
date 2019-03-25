@@ -1,6 +1,6 @@
 package daily;
 
-public class Daily_02_25_2019 {
+public class XORLinkedList {
 
   /**
    * This problem was asked by Google.

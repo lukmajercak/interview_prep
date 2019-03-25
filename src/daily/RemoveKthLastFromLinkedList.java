@@ -1,6 +1,6 @@
 package daily;
 
-public class Daily_03_17_2019 {
+public class RemoveKthLastFromLinkedList {
 
   /**
    * This problem was asked by Google.
@@ -13,7 +13,7 @@ public class Daily_03_17_2019 {
    * Do this in constant space and in one pass.
    */
   public static void main(String[] args) {
-    Daily_03_17_2019 solution = new Daily_03_17_2019();
+    RemoveKthLastFromLinkedList solution = new RemoveKthLastFromLinkedList();
 
     // 1 -> null
     Node n1 = new Node(1);

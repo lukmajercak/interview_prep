@@ -1,6 +1,6 @@
 package daily;
 
-public class Daily_03_10_2019 {
+public class MinimumCostDistinctColors {
 
   /**
    * This problem was asked by Facebook.
@@ -12,7 +12,7 @@ public class Daily_03_10_2019 {
    * the nth house with kth color, return the minimum cost which achieves this goal.
    */
   public static void main(String[] args) {
-    Daily_03_10_2019 solution = new Daily_03_10_2019();
+    MinimumCostDistinctColors solution = new MinimumCostDistinctColors();
 
     int[][] prices = new int[][]{
         {1, 3, 2, 4},
