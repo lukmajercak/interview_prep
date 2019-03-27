@@ -142,7 +142,7 @@ public class LongestUnivaluePath {
     System.out.println(solution.longestUnivaluePath(root));
   }
 
-  //Global max
+  // Global max
   int max;
 
   public int longestUnivaluePath(TreeNode root) {
@@ -167,14 +167,14 @@ public class LongestUnivaluePath {
     if (node.left != null && node.left.val == node.val) {
       maxLeftSoFar = maxLeft + 1;
     }
-    if(node.right != null && node.right.val == node.val) {
+    if (node.right != null && node.right.val == node.val) {
       maxRightSoFar = maxRight + 1;
     }
     // Update the max with the sum of left and right length
     max = Math.max(max, maxLeftSoFar + maxRightSoFar);
     // Return the max from left and right to upper node
     // since only one side path is valid
-    return Math.max(maxLeftSoFar,maxRightSoFar);
+    return Math.max(maxLeftSoFar, maxRightSoFar);
   }
 
   static class TreeNode {

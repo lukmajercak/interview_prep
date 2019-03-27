@@ -56,8 +56,7 @@ public class RobotRoomCleaner {
 
       // turn to next direction
       robot.turnRight();
-      curDir += 1;
-      curDir %= 4;
+      curDir = (curDir + 1) % 4;
     }
   }
 

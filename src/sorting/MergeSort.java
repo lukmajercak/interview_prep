@@ -41,24 +41,19 @@ public class MergeSort {
     int middle = leftStart + ((rightEnd - leftStart) / 2);
     mergeSort(arr, tmp, leftStart, middle);
     mergeSort(arr, tmp, middle + 1, rightEnd);
-    merge(arr, tmp, leftStart, rightEnd);
+    merge(arr, tmp, leftStart, middle, middle + 1, rightEnd);
   }
 
-  static void merge(int[] arr, int[] tmp, int leftStart, int rightEnd) {
-    int leftEnd = leftStart + ((rightEnd - leftStart) / 2);
-    int rightStart = leftEnd + 1;
-
+  static void merge(int[] arr, int[] tmp, int leftStart, int leftEnd, int rightStart, int rightEnd) {
     int left = leftStart;
     int right = rightStart;
 
     int index = leftStart;
     while (left <= leftEnd && right <= rightEnd) {
       if (arr[left] <= arr[right]) {
-        tmp[index] = arr[left];
-        left++;
+        tmp[index] = arr[left++];
       } else {
-        tmp[index] = arr[right];
-        right++;
+        tmp[index] = arr[right++];
       }
       index++;
     }

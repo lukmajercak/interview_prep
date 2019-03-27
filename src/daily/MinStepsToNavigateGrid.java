@@ -74,10 +74,9 @@ public class MinStepsToNavigateGrid {
     Queue<Position> toVisit = new LinkedList<>();
     toVisit.offer(start);
 
-    Integer numSteps = -1;
+    Integer numSteps = 0;
     while (!toVisit.isEmpty()) {
       int check = toVisit.size();
-      numSteps++;
       while (check > 0) {
         check--;
         Position nextPos = toVisit.poll();
@@ -97,6 +96,7 @@ public class MinStepsToNavigateGrid {
           }
         }
       }
+      numSteps++;
     }
     return null;
   }

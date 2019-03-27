@@ -2,7 +2,7 @@ package leetcode.google;
 
 import java.util.*;
 
-public class RedundatConnection2 {
+public class RedundantConnection2 {
 
   /**
    * In this problem, a rooted tree is a directed graph such that, there is exactly one node (the root)
@@ -20,7 +20,7 @@ public class RedundatConnection2 {
    * answers, return the answer that occurs last in the given 2D-array.
    */
   public static void main(String[] args) {
-    RedundatConnection2 solution = new RedundatConnection2();
+    RedundantConnection2 solution = new RedundantConnection2();
 
     // Example 1:
     //Input: [[1,2], [1,3], [2,3]]

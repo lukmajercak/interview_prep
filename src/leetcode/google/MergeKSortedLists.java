@@ -56,20 +56,15 @@ public class MergeKSortedLists {
     int end = lists.length - 1;
 
     while (end != 0) {
-
       int start = 0;
       int j = end;
 
       while (start < j) {
         lists[start] = mergeTwoLists(lists[start], lists[j]);
-
         start++;
         j--;
-
-        if (start >= j) {
-          end = j;
-        }
       }
+      end = j;
     }
     return lists[0];
   }

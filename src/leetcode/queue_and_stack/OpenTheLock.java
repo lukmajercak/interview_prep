@@ -88,11 +88,9 @@ public class OpenTheLock {
     Set<String> visited = new HashSet<>();
     visited.add(startingPosition);
 
-    int stepsTaken = -1;
+    int stepsTaken = 0;
 
     while (!positionsToCheck.isEmpty()) {
-      stepsTaken++;
-
       // Check all on this level
       int size = positionsToCheck.size();
       for (int i = 0; i < size; i++) {
@@ -110,6 +108,7 @@ public class OpenTheLock {
           }
         }
       }
+      stepsTaken++;
     }
     return -1;
   }

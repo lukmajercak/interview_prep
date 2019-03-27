@@ -42,8 +42,8 @@ public class QuickSort {
     int pi = partition(arr, low, high);
 
     // Recursively sort elements before partition and after partition
-    quicksort(arr, low, pi-1);
-    quicksort(arr, pi+1, high);
+    quicksort(arr, low, pi - 1);
+    quicksort(arr, pi + 1, high);
   }
 
   /**

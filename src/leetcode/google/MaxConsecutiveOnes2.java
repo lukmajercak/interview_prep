@@ -28,26 +28,26 @@ public class MaxConsecutiveOnes2 {
 
   public int findMaxConsecutiveOnes(int[] nums) {
     int max = 0;
-    Integer previous = null;
+    Integer previousConsecutiveOnes = null;
     boolean previousZero = false;
-    int current = 0;
+    int currentConsecutiveOnes = 0;
 
     for (int num : nums) {
       if (num == 0) {
         if (previousZero) {
-          previous = null;
+          previousConsecutiveOnes = null;
         } else {
-          previous = current;
+          previousConsecutiveOnes = currentConsecutiveOnes;
         }
-        current = 0;
+        currentConsecutiveOnes = 0;
       } else {
-        current++;
+        currentConsecutiveOnes++;
       }
       previousZero = num == 0;
-      if (previous != null) {
-        max = Math.max(max, current + previous + 1);
+      if (previousConsecutiveOnes != null) {
+        max = Math.max(max, currentConsecutiveOnes + previousConsecutiveOnes + 1);
       }
-      max = Math.max(max, current);
+      max = Math.max(max, currentConsecutiveOnes);
     }
     return max;
   }

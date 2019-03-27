@@ -120,9 +120,7 @@ public class is_binary_search_tree {
     return isBST;
   }
 
-
-
-    // A function for creating a tree.
+  // A function for creating a tree.
   // Input:
   // - mapping: a node-to-node mapping that shows how the tree should be constructed
   // - headValue: the value that will be used for the head ndoe
@@ -130,7 +128,7 @@ public class is_binary_search_tree {
   // - The head node of the resulting tree
   public static TreeNode createTree(HashMap<Integer, int[]> mapping, int headValue) {
     TreeNode head = new TreeNode(headValue, null, null);
-    HashMap<Integer, TreeNode> nodes = new HashMap<Integer, TreeNode>();
+    HashMap<Integer, TreeNode> nodes = new HashMap<>();
     nodes.put(headValue, head);
     for(Integer key : mapping.keySet()) {
       int[] value = mapping.get(key);

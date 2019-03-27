@@ -133,7 +133,7 @@ public class SpiralMatrix {
     if (startRow == endRow) {
       drawHorizontal(startRow, startColumn, endColumn, matrix, output);
     } else if (startColumn == endColumn) {
-      drawVertical(endColumn, startRow, endRow, matrix, output);
+      drawVertical(startColumn, startRow, endRow, matrix, output);
     } else {
       drawHorizontal(startRow, startColumn, endColumn, matrix, output);
       drawVertical(endColumn, startRow + 1, endRow - 1, matrix, output);

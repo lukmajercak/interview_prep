@@ -60,7 +60,6 @@ public class CloneGraph {
     for (Node neighbor : node.neighbors) {
       copy.neighbors.add(cloneGraph(neighbor, visited));
     }
-    visited.put(node, copy);
     return copy;
   }
 

@@ -85,8 +85,7 @@ public class lowest_common_ancestor {
       TreeNode nextK = pathToK.pop();
       if (nextJ == nextK) {
         toReturn = nextJ;
-      }
-      else {
+      } else {
         break;
       }
     }
@@ -121,7 +120,6 @@ public class lowest_common_ancestor {
     return null;
   }
 
-
   // A function for creating a tree.
   // Input:
   // - mapping: a node-to-node mapping that shows how the tree should be constructed
@@ -130,7 +128,7 @@ public class lowest_common_ancestor {
   // - The head node of the resulting tree
   public static TreeNode createTree(HashMap<Integer, int[]> mapping, int headValue) {
     TreeNode head = new TreeNode(headValue, null, null);
-    HashMap<Integer, TreeNode> nodes = new HashMap<Integer, TreeNode>();
+    HashMap<Integer, TreeNode> nodes = new HashMap<>();
     nodes.put(headValue, head);
     for(Integer key : mapping.keySet()) {
       int[] value = mapping.get(key);

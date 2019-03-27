@@ -72,10 +72,12 @@ public class OneEditDistance {
     boolean foundDiff = false;
     for (int i = 0; i < a.length(); i++) {
       boolean match = a.charAt(i) == b.charAt(i);
-      if (!match && foundDiff) {
-        return false;
+      if (!match) {
+        if (foundDiff) {
+          return false;
+        }
+        foundDiff = true;
       }
-      foundDiff |= !match;
     }
     return foundDiff;
   }
@@ -87,13 +89,14 @@ public class OneEditDistance {
 
     while (aIndex < a.length() && bIndex < b.length()) {
       boolean match = a.charAt(aIndex) == b.charAt(bIndex);
-      if (!match && added) {
-        return false;
-      }
       if (match) {
         aIndex++;
+      } else {
+        if (added) {
+          return false;
+        }
+        added = true;
       }
-      added |= !match;
       bIndex++;
     }
     return added || (!added && aIndex == a.length());

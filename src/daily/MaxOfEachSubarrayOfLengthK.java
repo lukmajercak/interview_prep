@@ -32,17 +32,20 @@ public class MaxOfEachSubarrayOfLengthK {
   void printMaximums(int[] numbers, int k) {
     Queue<Integer> maxIndices = new LinkedList<>();
     int i = 0;
-    for (i = 0; i < k; i++) {
+    for (; i < k; i++) {
       while (!maxIndices.isEmpty() && numbers[i] > numbers[maxIndices.peek()]) {
         maxIndices.remove();
       }
       maxIndices.offer(i);
     }
-    for (; i < numbers.length; i++) {
+
+    for (;i < numbers.length; i++) {
       System.out.println(numbers[maxIndices.peek()]);
+
       while (!maxIndices.isEmpty() && maxIndices.peek() <= i - k) {
         maxIndices.remove();
       }
+
       while (!maxIndices.isEmpty() && numbers[i] > numbers[maxIndices.peek()]) {
         maxIndices.remove();
       }

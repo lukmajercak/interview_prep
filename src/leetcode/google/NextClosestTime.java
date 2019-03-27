@@ -41,6 +41,8 @@ public class NextClosestTime {
     System.out.println(solution.nextClosestTime("20:48")); // 22:00
   }
 
+  static final int MINUTES_IN_DAY = 24 * 60;
+
   public String nextClosestTime(String time) {
     int minutes = Integer.parseInt(time.substring(0, 2)) * 60;
     minutes += Integer.parseInt(time.substring(3));
@@ -51,7 +53,7 @@ public class NextClosestTime {
     }
 
     while (true) {
-      minutes = (minutes + 1) % (24 * 60);
+      minutes = (minutes + 1) % MINUTES_IN_DAY;
 
       int[] nextTime = {minutes / 60 / 10, minutes / 60 % 10, minutes % 60 / 10, minutes % 60 % 10};
 

@@ -31,8 +31,8 @@ public class DailyTemperatures {
 
     for (int i = 0; i < T.length; i++) {
       while (!stack.isEmpty() && T[i] > T[stack.peek()]) {
-        int idx = stack.pop();
-        ret[idx] = i - idx;
+        int previous = stack.pop();
+        ret[previous] = i - previous;
       }
       stack.push(i);
     }

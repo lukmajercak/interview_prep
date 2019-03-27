@@ -66,7 +66,7 @@ public class SubstringAtMostKDistinct {
     return s.substring(range.start, range.end);
   }
 
-  static Range longestSubstring2(String s, int k, Set<Character> seenChars, int index, int startIndex) {
+  static Range longestSubstring2(String s, int k, Set<Character> seenChars, int startIndex, int index) {
     if (index == s.length()) {
       return new Range(startIndex, s.length());
     }
@@ -77,7 +77,7 @@ public class SubstringAtMostKDistinct {
       return new Range(startIndex, index);
     }
 
-    Range withAdding = longestSubstring2(s, k, seenChars, index + 1, startIndex);
+    Range withAdding = longestSubstring2(s, k, seenChars, startIndex, index + 1);
     Range withoutAdding = longestSubstring2(s, k, new HashSet<>(k), index + 1, index + 1);
 
     if (withAdding.length() > withoutAdding.length()) {

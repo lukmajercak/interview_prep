@@ -33,10 +33,6 @@ public class ReplaceWords {
 
   TrieNode trie = new TrieNode();
 
-  private void addToDict(String toAdd) {
-    trie.insert(toAdd);
-  }
-
   private int charsMatched(String word) {
     int i = 0;
     TrieNode nextNode = trie.children.get(word.charAt(i));
@@ -52,7 +48,7 @@ public class ReplaceWords {
 
   public String replaceWords(List<String> dict, String sentence) {
     for (String dictStr : dict) {
-      addToDict(dictStr);
+      trie.insert(dictStr);
     }
 
     StringBuilder outStr = new StringBuilder();

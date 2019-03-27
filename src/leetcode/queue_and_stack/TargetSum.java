@@ -50,9 +50,8 @@ public class TargetSum {
     if (i == nums.length) {
       return S == sumSoFar ? 1 : 0;
     }
-    int num = nums[i];
-    int ret = findTargetSumWays(nums, S, i + 1, sumSoFar + num, memo) +
-        findTargetSumWays(nums, S, i + 1, sumSoFar - num, memo);
+    int ret = findTargetSumWays(nums, S, i + 1, sumSoFar + nums[i], memo) +
+        findTargetSumWays(nums, S, i + 1, sumSoFar - nums[i], memo);
     memo.put(key, ret);
     return ret;
   }

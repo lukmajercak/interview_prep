@@ -48,7 +48,7 @@ public class PalindromePairs {
           }
         }
       } else {
-        query(trie, words[i], i, result);
+        query(trie, word, i, result);
       }
     }
     return new ArrayList<List<Integer>>(result);

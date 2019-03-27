@@ -106,7 +106,7 @@ public class ShortestDistanceFromAllBuildings {
       }
     }
 
-    int result=Integer.MAX_VALUE;
+    int result = Integer.MAX_VALUE;
     for (int row = 0; row < numRows; row++) {
       for (int col = 0; col < numCols; col++) {
         if (grid[row][col] == 0 && numReach[row][col] == numBuildings){

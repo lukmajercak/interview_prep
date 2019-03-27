@@ -77,15 +77,15 @@ public class ValidParentheses {
   }
 
   Character counter(char c) {
-    if (c == '}') {
-      return '{';
+    switch(c) {
+      case '}':
+        return '{';
+      case ']':
+        return '[';
+      case ')':
+        return '(';
+      default:
+        return null;
     }
-    if (c == ']') {
-      return '[';
-    }
-    if (c == ')') {
-      return '(';
-    }
-    return null;
   }
 }

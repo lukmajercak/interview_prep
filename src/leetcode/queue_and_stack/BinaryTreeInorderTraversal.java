@@ -49,7 +49,7 @@ public class BinaryTreeInorderTraversal {
 
     while (current != null || !stack.isEmpty()) {
       // Reach the left most Node of the current Node
-      while (current !=  null) {
+      while (current != null) {
         // Place pointer to a tree node on the stack before traversing
         // the node's left subtree
         stack.push(current);

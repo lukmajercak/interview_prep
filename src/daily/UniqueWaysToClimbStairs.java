@@ -39,12 +39,13 @@ public class UniqueWaysToClimbStairs {
 
     long result = 0;
     for (Integer step : steps) {
-      if (n == step) {
+      if (step == n) {
         result += 1;
-      } else if (n > step) {
+      } if (step < n) {
         result += numWays(n - step, steps, memo);
       }
     }
+
     memo.put(n, result);
     return result;
   }

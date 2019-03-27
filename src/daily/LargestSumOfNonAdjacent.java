@@ -54,7 +54,7 @@ public class LargestSumOfNonAdjacent {
     int currentValue = numbers[i];
     if (i == numbers.length - 1) {
       memo.put(i, currentValue);
-      return numbers[i];
+      return currentValue;
     }
 
     Integer sumNextElem = Integer.MIN_VALUE;

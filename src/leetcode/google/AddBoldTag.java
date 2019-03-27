@@ -40,11 +40,12 @@ public class AddBoldTag {
 
     for (int i = 0; i < s.length(); i++) {
       for (String word : dict) {
-        if (i + word.length() > s.length()) {
+        int endWordIndex = i + word.length();
+        if (endWordIndex > s.length()) {
           continue;
         }
-        if (s.substring(i, i + word.length()).equals(word)) {
-          for (int j = i; j < i + word.length(); j++) {
+        if (s.substring(i, endWordIndex).equals(word)) {
+          for (int j = i; j < endWordIndex; j++) {
             bold[j] = true;
           }
         }
@@ -57,15 +58,14 @@ public class AddBoldTag {
     for (int i = 0; i < bold.length; i++) {
       if (bold[i] && !inBold) {
         // add <b>
-        output.append("<b>" + s.charAt(i));
+        output.append("<b>");
         closed = false;
       } else if (!bold[i] && inBold) {
         // add </b>
-        output.append("</b>" + s.charAt(i));
+        output.append("</b>");
         closed = true;
-      } else {
-        output.append(s.substring(i, i + 1));
       }
+      output.append(s.charAt(i));
       inBold = bold[i];
     }
     if (!closed) {

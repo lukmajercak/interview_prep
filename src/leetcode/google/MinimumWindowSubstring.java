@@ -63,9 +63,10 @@ public class MinimumWindowSubstring {
 
       // shrink sliding window from the left while we are matching everything
       while (missing == 0 && left < right) {
-        if (right - left < minWindowLength) {
+        int windowSize = right - left;
+        if (windowSize < minWindowLength) {
           windowLeft = left;
-          minWindowLength = right - left;
+          minWindowLength = windowSize;
         }
         char leftChar = s.charAt(left);
         Integer seenThisChar = occurrences.get(leftChar);
