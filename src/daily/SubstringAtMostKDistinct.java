@@ -1,6 +1,8 @@
 package daily;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class SubstringAtMostKDistinct {
@@ -22,17 +24,23 @@ public class SubstringAtMostKDistinct {
   public static void main(String[] args) {
     System.out.println(longestSubstring("abcba", 1));
     System.out.println(longestSubstring2("abcba", 1));
+    System.out.println(longestSubstring3("abcba", 1));
     System.out.println(longestSubstring("abcba", 2));
     System.out.println(longestSubstring2("abcba", 2));
+    System.out.println(longestSubstring3("abcba", 2));
     System.out.println(longestSubstring("abcba", 3));
     System.out.println(longestSubstring2("abcba", 3));
+    System.out.println(longestSubstring3("abcba", 3));
 
     System.out.println(longestSubstring("abcbdcadba", 3));
     System.out.println(longestSubstring2("abcbdcadba", 3));
+    System.out.println(longestSubstring3("abcbdcadba", 3));
     System.out.println(longestSubstring("abcbdcaaaadba", 2));
     System.out.println(longestSubstring2("abcbdcaaaadba", 2));
+    System.out.println(longestSubstring3("abcbdcaaaadba", 2));
     System.out.println(longestSubstring("abcbdcaaaadba", 3));
     System.out.println(longestSubstring2("abcbdcaaaadba", 3));
+    System.out.println(longestSubstring3("abcbdcaaaadba", 3));
   }
 
   static String longestSubstring(String s, int k) {
@@ -84,6 +92,47 @@ public class SubstringAtMostKDistinct {
       return withAdding;
     }
     return withoutAdding;
+  }
+
+
+  static String longestSubstring3(String s, int k) {
+    int start = 0;
+    int end = 0;
+
+    Map<Character, Integer> occurrences = new HashMap<>();
+
+    String longest = null;
+
+    while (end < s.length()) {
+      while (occurrences.size() <= k && end < s.length()) {
+        if (longest == null || (end - start > longest.length())) {
+          longest = s.substring(start, end);
+        }
+
+        char endC = s.charAt(end);
+        Integer occurrencesC = occurrences.get(endC);
+        if (occurrencesC == null) {
+          occurrences.put(endC, 1);
+        } else {
+          occurrences.put(endC, occurrencesC + 1);
+        }
+
+        end++;
+      }
+      while (occurrences.size() > k) {
+        char startC = s.charAt(start);
+        Integer occurrencesC = occurrences.get(startC);
+        if (occurrencesC == null || occurrencesC == 1) {
+          occurrences.remove(startC);
+        } else {
+          occurrences.put(startC, occurrencesC - 1);
+        }
+
+        start++;
+      }
+    }
+
+    return longest;
   }
 
   static class Range {

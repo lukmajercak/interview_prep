@@ -32,10 +32,10 @@ public class SortWave {
 
   public static void sortWave(int[] arr) {
     for (int i = 0; i < arr.length - 1; i += 2) {
-      if (i > 0 && arr[i] < arr[i - 1]) {
+      if (i - 1 >= 0 && arr[i] < arr[i - 1]) {
         swap(arr, i , i - 1);
       }
-      if (i < arr.length - 1 && arr[i] < arr[i + 1]) {
+      if (i + 1 < arr.length && arr[i] < arr[i + 1]) {
         swap(arr, i, i + 1);
       }
     }

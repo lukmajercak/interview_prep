@@ -60,7 +60,6 @@ public class QuickSort {
         swap(arr, smallerIndex++, i);
       }
     }
-
     // put pivot into the correct position
     swap(arr, smallerIndex, high);
     return smallerIndex;

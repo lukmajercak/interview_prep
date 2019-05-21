@@ -48,7 +48,7 @@ public class BinarySearch {
     if (arr[middle] == x) {
       return x;
     }
-    if (arr[middle] < x) {
+    if (x > arr[middle]) {
       return binarySearch(arr, x, middle + 1, end);
     }
     return binarySearch(arr, x, start, middle - 1);

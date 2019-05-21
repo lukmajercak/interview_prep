@@ -159,7 +159,7 @@ public class NumberOfIslands {
 
     @Override
     public int hashCode() {
-      return new String(String.valueOf(x) + String.valueOf(y)).hashCode();
+      return new String(String.valueOf(x) + "," + String.valueOf(y)).hashCode();
     }
   }
 }

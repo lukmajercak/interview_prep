@@ -48,6 +48,16 @@ public class MergeKSortedLists {
    // merge L3, L4
    // [L1+L6, L2+L5, L3+L4, L4, L5, L6]
    // do the same, start = 0, end = 2
+
+
+   *
+   *  This approach doesn’t require extra space for heap and works in O(nk Log k)
+   *
+   * We already know that merging of two linked lists can be done in O(n) time and O(1) space
+   * (For arrays O(n) space is required). The idea is to pair up K lists and merge each pair
+   * in linear time using O(1) space. After first cycle, K/2 lists are left each of size 2*N.
+   * After second cycle, K/4 lists are left each of size 4*N and so on. We repeat the procedure
+   * until we have only one list left.
    */
   public ListNode mergeKLists(ListNode[] lists) {
     if (lists.length == 0) {
@@ -70,13 +80,13 @@ public class MergeKSortedLists {
   }
 
   ListNode mergeTwoLists(ListNode a, ListNode b) {
-    ListNode result = null;
     if (a == null) {
       return b;
     }
     if (b == null) {
       return a;
     }
+    ListNode result = null;
     if (a.val < b.val) {
       result = a;
       result.next = mergeTwoLists(a.next, b);

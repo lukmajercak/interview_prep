@@ -65,9 +65,8 @@ public class TwoLinkedListsFindIntersectingNode {
   }
 
   Node advanceBy(Node list, int index) {
-    while(index > 0) {
+    while (index-- > 0) {
       list = list.next;
-      index--;
     }
     return list;
   }

@@ -27,7 +27,7 @@ public class IntersectionOfTwoArrays {
     System.out.println(Arrays.toString(solution.intersection(nums1, nums2)));
   }
 
-  public int[] intersection(int[] nums1, int[] nums2) {
+  public Integer[] intersection(int[] nums1, int[] nums2) {
     Set<Integer> set1 = new HashSet<>();
     for (int num : nums1) {
       set1.add(num);
@@ -38,11 +38,9 @@ public class IntersectionOfTwoArrays {
         resultSet.add(num);
       }
     }
-    int[] result = new int[resultSet.size()];
-    int i = 0;
-    for (Integer num : resultSet) {
-      result[i++] = num;
-    }
+    Integer[] result = new Integer[resultSet.size()];
+    result = resultSet.toArray(result);
+
     return result;
   }
 }
