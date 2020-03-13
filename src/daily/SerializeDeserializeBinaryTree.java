@@ -161,8 +161,7 @@ public class SerializeDeserializeBinaryTree {
     if (n == null) {
       return "#";
     }
-    return String.valueOf(n.value) + " " + serialize2(n.left) +
-        " " + serialize2(n.right);
+    return n.value + " " + serialize2(n.left) + " " + serialize2(n.right);
   }
 
   /**

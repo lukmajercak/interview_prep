@@ -42,11 +42,11 @@ public class CoinChange {
 
 
   public int coinChange(int[] coins, int amount) {
-    int minWays = coinChange(coins, amount, amount, new HashMap<>());
+    int minWays = coinChange(coins, amount, new HashMap<>());
     return minWays == Integer.MAX_VALUE ? -1 : minWays;
   }
 
-  Integer coinChange(int[] coins, int amount, int remaining, Map<Integer, Integer> memo) {
+  Integer coinChange(int[] coins, int remaining, Map<Integer, Integer> memo) {
     if (memo.get(remaining) != null) {
       return memo.get(remaining);
     }
@@ -59,7 +59,7 @@ public class CoinChange {
 
     int minWays = Integer.MAX_VALUE;
     for (int coin : coins) {
-      Integer numWays = coinChange(coins, amount, remaining - coin, memo);
+      Integer numWays = coinChange(coins, remaining - coin, memo);
       if (numWays != null && numWays != Integer.MAX_VALUE) {
         minWays = Math.min(minWays, numWays + 1);
       }

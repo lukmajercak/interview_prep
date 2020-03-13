@@ -44,14 +44,14 @@ public class PalindromePairs {
       if (word.isEmpty()) {
         for (int j = 0; j < words.length; j++) {
           if (j != i && isPalindrome(words[j])) {
-            result.add(Arrays.asList(new Integer[]{j, i}));
+            result.add(Arrays.asList(j, i));
           }
         }
       } else {
         query(trie, word, i, result);
       }
     }
-    return new ArrayList<List<Integer>>(result);
+    return new ArrayList<>(result);
   }
 
   static boolean isPalindrome(String word) {
@@ -74,7 +74,7 @@ public class PalindromePairs {
     TrieNode next = trie;
 
     if (next.index != null && next.index != index && isPalindrome(word)) {
-      result.add(Arrays.asList(new Integer[]{next.index, index}));
+      result.add(Arrays.asList(next.index, index));
     }
 
     // Iterate the word from the end
@@ -85,17 +85,16 @@ public class PalindromePairs {
         break;
       }
       if (next.index != null && next.index != index && isPalindrome(word.substring(0, i))) {
-        result.add(Arrays.asList(new Integer[]{next.index, index}));
+        result.add(Arrays.asList(next.index, index));
       }
     }
-    TrieNode previouslyChecked = next;
     if (i == -1 && next != null) {
       for (TrieNode child : next.children.values()) {
         List<TrieNode> allWords = child.findAllWords();
         for (TrieNode wordNode : allWords) {
           String substring = wordNode.value.substring(word.length());
           if (isPalindrome(substring) && wordNode.index != index) {
-            result.add(Arrays.asList(new Integer[]{wordNode.index, index}));
+            result.add(Arrays.asList(wordNode.index, index));
           }
         }
       }

@@ -49,8 +49,7 @@ public class MinimumCostToHireKWorkers {
     int sum = 0;
     double result = Integer.MAX_VALUE;
 
-    for (int i = 0; i < list.size(); i++) {
-      Worker w = list.get(i);
+    for (Worker w : list) {
       sum += w.quality;
       q.offer(-w.quality);
 

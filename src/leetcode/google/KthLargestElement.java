@@ -6,7 +6,8 @@ import java.util.List;
 public class KthLargestElement {
 
   /**
-   * Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+   * Find the kth largest element in an unsorted array. Note that it is the kth largest element
+   * in the sorted order, not the kth distinct element.
    */
   public static void main(String[] args) {
     KthLargestElement solution = new KthLargestElement();
@@ -100,14 +101,11 @@ public class KthLargestElement {
 
         // Find max from the children
         if (leftChild != null && leftChild > current) {
-          if (leftChild > max) {
-            max = leftChild;
-            maxIndex = getLeftIndex(currentIndex);
-          }
+          max = leftChild;
+          maxIndex = getLeftIndex(currentIndex);
         }
         if (rightChild != null && rightChild > current) {
           if (rightChild > max) {
-            max = rightChild;
             maxIndex = getRightIndex(currentIndex);
           }
         }
@@ -132,10 +130,6 @@ public class KthLargestElement {
       Integer tmp = tree.get(i);
       tree.set(i, tree.get(j));
       tree.set(j, tmp);
-    }
-
-    Integer getParent(int index) {
-      return getIfInBounds(getParentIndex(index));
     }
 
     Integer getLeft(int index) {

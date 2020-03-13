@@ -45,7 +45,7 @@ public class WordDictionary {
 
   private boolean search(String word, TrieNode node, int i) {
     if (i == word.length()) {
-      return node.isWord;
+      return node.word != null;
     }
 
     Character nextChar = word.charAt(i);

@@ -1,8 +1,5 @@
 package leetcode.google;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MaximumProductSubarray {
 
   /**
@@ -26,7 +23,9 @@ public class MaximumProductSubarray {
   }
 
   public int maxProduct(int[] nums) {
-    int currentMaxProduct = nums[0];
+    int currentMaxProduct;
+    int currentMinProduct;
+
     int prevMaxProduct = nums[0];
     int prevMinProduct = nums[0];
     int ret = nums[0];
@@ -34,12 +33,10 @@ public class MaximumProductSubarray {
     for (int i = 1; i < nums.length; i++) {
       int num = nums[i];
 
-      currentMaxProduct = Math.max(prevMaxProduct * num,
-          prevMinProduct * num);
+      currentMaxProduct = Math.max(prevMaxProduct * num, prevMinProduct * num);
       currentMaxProduct = Math.max(currentMaxProduct, num);
 
-      int currentMinProduct = Math.min(prevMaxProduct * num,
-          prevMinProduct * num);
+      currentMinProduct = Math.min(prevMaxProduct * num, prevMinProduct * num);
       currentMinProduct = Math.min(currentMinProduct, num);
 
       prevMaxProduct = currentMaxProduct;

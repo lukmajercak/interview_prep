@@ -130,7 +130,7 @@ public class EvaluateDivision {
 
   private Double findPath(GraphNode nextNode, GraphNode toFind, Set<GraphNode> visited) {
     if (nextNode.equals(toFind)) {
-      return new Double(1);
+      return 1d;
     }
     visited.add(nextNode);
     for (GraphNode child : nextNode.children.keySet()) {
@@ -141,7 +141,7 @@ public class EvaluateDivision {
         }
       }
     }
-    return new Double(-1);
+    return (double) -1;
   }
 
   GraphNode checkOrAdd(Map<String, GraphNode> map, String key) {

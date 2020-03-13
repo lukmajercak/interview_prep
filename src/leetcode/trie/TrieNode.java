@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class TrieNode {
 
-  boolean isWord = false;
   String word = null;
   Map<Character, TrieNode> children = new HashMap<>();
 
@@ -26,8 +25,7 @@ public class TrieNode {
       child = new TrieNode();
       this.children.put(nextChar, child);
     }
-    child.isWord |= i == word.length() - 1;
-    if (child.isWord) {
+    if (i == word.length() - 1) {
       child.word = word;
     }
 
@@ -37,7 +35,7 @@ public class TrieNode {
   /** Returns if the word is in the leetcode.trie. */
   public boolean search(String word) {
     TrieNode searchNode = searchNode(word, 0);
-    return searchNode != null && searchNode.isWord;
+    return searchNode != null && searchNode.word != null;
   }
 
   /** Returns if there is any word in the leetcode.trie that starts with the given prefix. */

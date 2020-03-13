@@ -52,7 +52,6 @@ public class OpenTheLock {
    */
   public static void main(String[] args) {
     OpenTheLock openLock = new OpenTheLock();
-    List<String> nextPositions = openLock.getNextPositions("9999");
 
     // Example 1:
     String[] deadends = new String[]{"0201","0101","0102","1212","2002"};
@@ -72,10 +71,7 @@ public class OpenTheLock {
   }
 
   public int openLock(String[] deadends, String target) {
-    Set<String> deadendsSet = new HashSet<>();
-    for (String deadend : deadends) {
-      deadendsSet.add(deadend);
-    }
+    Set<String> deadendsSet = new HashSet<>(Arrays.asList(deadends));
 
     String startingPosition = "0000";
     if (deadendsSet.contains(startingPosition)) {
@@ -119,7 +115,7 @@ public class OpenTheLock {
       int wheelPos = Character.getNumericValue(position.charAt(i));
 
       String before = position.substring(0, i);
-      String after = position.substring(i + 1, position.length());
+      String after = position.substring(i + 1);
 
       positions.add(before + (wheelPos == 9 ? 0 : wheelPos + 1) + after);
       positions.add(before + (wheelPos == 0 ? 9 : wheelPos - 1) + after);

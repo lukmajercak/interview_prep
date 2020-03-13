@@ -23,11 +23,11 @@ public class ProductOfAllExceptI {
    */
 
   public static void main(String[] args) {
-    System.out.println(solution(Arrays.asList(new Integer[]{1, 2, 3, 4, 5})));
-    System.out.println(solution(Arrays.asList(new Integer[]{3, 2, 1})));
+    System.out.println(solution(Arrays.asList(1, 2, 3, 4, 5)));
+    System.out.println(solution(Arrays.asList(3, 2, 1)));
 
-    System.out.println(solution2(Arrays.asList(new Integer[]{1, 2, 3, 4, 5})));
-    System.out.println(solution2(Arrays.asList(new Integer[]{3, 2, 1})));
+    System.out.println(solution2(Arrays.asList(1, 2, 3, 4, 5)));
+    System.out.println(solution2(Arrays.asList(3, 2, 1)));
   }
 
   static List<Integer> solution(List<Integer> input) {

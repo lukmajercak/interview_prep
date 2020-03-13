@@ -9,7 +9,7 @@ public class is_binary_search_tree {
     // The mapping we're going to use for constructing a tree.
     // For example, {0: [1, 2]} means that 0's left child is 1, and its right
     // child is 2.
-    HashMap<Integer, int[]> mapping1 = new HashMap<Integer, int[]>();
+    HashMap<Integer, int[]> mapping1 = new HashMap<>();
     int[] childrenA = {1, 2};
     int[] childrenB = {3, 4};
     int[] childrenC = {5, 6};
@@ -26,7 +26,7 @@ public class is_binary_search_tree {
     //     3  4 5  6
 
 
-    HashMap<Integer, int[]> mapping2 = new HashMap<Integer, int[]>();
+    HashMap<Integer, int[]> mapping2 = new HashMap<>();
     int[] childrenD = {1, 4};
     int[] childrenE = {0, 2};
     int[] childrenF = {5, 6};
@@ -43,7 +43,7 @@ public class is_binary_search_tree {
     //     0  2  5   6
 
 
-    HashMap<Integer, int[]> mapping3 = new HashMap<Integer, int[]>();
+    HashMap<Integer, int[]> mapping3 = new HashMap<>();
     int[] childrenG = {1, 5};
     int[] childrenH = {0, 2};
     int[] childrenI = {4, 6};
@@ -61,7 +61,7 @@ public class is_binary_search_tree {
 
 
 
-    HashMap<Integer, int[]> mapping4 = new HashMap<Integer, int[]>();
+    HashMap<Integer, int[]> mapping4 = new HashMap<>();
     int[] childrenJ = {1, 5};
     int[] childrenK = {0, 4};
     mapping4.put(3, childrenJ);
@@ -110,11 +110,11 @@ public class is_binary_search_tree {
     boolean isBST = true;
     if (node.left != null) {
       Integer newUpperLimit = Math.min(upperLimit != null ? upperLimit : node.value, node.value);
-      isBST &= isBSTImpl(node.left, newUpperLimit, lowerLimit);
+      isBST = isBSTImpl(node.left, newUpperLimit, lowerLimit);
     }
     if (isBST && node.right != null) {
       Integer newLowerLimit = Math.max(lowerLimit != null ? lowerLimit : node.value, node.value);
-      isBST &= isBSTImpl(node.right, upperLimit, newLowerLimit);
+      isBST = isBSTImpl(node.right, upperLimit, newLowerLimit);
     }
 
     return isBST;

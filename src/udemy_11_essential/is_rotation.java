@@ -1,8 +1,5 @@
 package udemy_11_essential;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class is_rotation {
 
   public static void main(String[] args) {
@@ -51,8 +48,8 @@ public class is_rotation {
       return false;
     }
 
-    for (int i = 0; i < array1.length; i++) {
-      if (array1[i] != array2[j]) {
+    for (int value : array1) {
+      if (value != array2[j]) {
         return false;
       }
       j = (j + 1) % array2.length;

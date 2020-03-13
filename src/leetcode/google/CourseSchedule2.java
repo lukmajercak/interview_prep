@@ -24,7 +24,7 @@ public class CourseSchedule2 {
     //Explanation: There are a total of 2 courses to take. To take course 1 you should have finished
     //             course 0. So the correct course order is [0,1] .
     int[][] prerequisites = new int[][]{{1, 0}};
-    //System.out.println(Arrays.toString(solution.findOrder(2, prerequisites)));
+    System.out.println(Arrays.toString(solution.findOrder(2, prerequisites)));
 
     // Input: 3, [[1,0],[2,0],[0,2]]
     //Output: []
@@ -72,12 +72,12 @@ public class CourseSchedule2 {
 
     // records the number of prerequisites each course (0,...,numCourses-1) requires
     int[] pCounter = new int[numCourses];
-    for (int i = 0; i < len; i++){
-      pCounter[prerequisites[i][0]]++;
+    for (int[] prerequisite : prerequisites) {
+      pCounter[prerequisite[0]]++;
     }
 
     // stores courses that have no prerequisites
-    LinkedList<Integer> queue = new LinkedList<Integer>();
+    LinkedList<Integer> queue = new LinkedList<>();
     for (int i = 0; i < numCourses; i++){
       if (pCounter[i] == 0){
         queue.add(i);
@@ -90,15 +90,15 @@ public class CourseSchedule2 {
     int[] result = new int[numCourses];
     int j = 0;
 
-    while(!queue.isEmpty()){
+    while (!queue.isEmpty()){
       int c = queue.remove();
       result[j++] = c;
 
-      for (int i = 0; i < len; i++){
-        if (prerequisites[i][1] == c){
-          int nextCourse = prerequisites[i][0];
+      for (int[] prerequisite : prerequisites) {
+        if (prerequisite[1] == c) {
+          int nextCourse = prerequisite[0];
           pCounter[nextCourse]--;
-          if (pCounter[nextCourse] == 0){
+          if (pCounter[nextCourse] == 0) {
             queue.add(nextCourse);
             numNoPre++;
           }

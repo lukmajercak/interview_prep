@@ -125,8 +125,8 @@ public class WordSquares {
 
   String getPrefix(List<String> soFar, int depth) {
     StringBuilder str = new StringBuilder();
-    for (int i = 0; i < soFar.size(); i++) {
-      str.append(soFar.get(i).charAt(depth));
+    for (String s : soFar) {
+      str.append(s.charAt(depth));
     }
     return str.toString();
   }

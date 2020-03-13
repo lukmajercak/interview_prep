@@ -96,12 +96,8 @@ public class InsertInterval {
       newIntervals.add(newInterval);
     } else {
       // Merge intervals with the new interval
-      Integer mergeStart = newInterval[0];
-      Integer mergeEnd = newInterval[1];
-      if (i < intervals.length) {
-        mergeStart = Math.min(intervals[i][0], newInterval[0]);
-        mergeEnd = Math.max(intervals[i][1], newInterval[1]);
-      }
+      int mergeStart = Math.min(intervals[i][0], newInterval[0]);
+      int mergeEnd = Math.max(intervals[i][1], newInterval[1]);
 
       while (i < intervals.length &&
           intervals[i][0] <= newInterval[1]) {

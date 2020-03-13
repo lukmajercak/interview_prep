@@ -32,7 +32,7 @@ public class WordLadder {
     // return its length 5.
     String beginWord = "hit";
     String endWord = "cog";
-    List<String> wordList = Arrays.asList(new String[]{"hot","dot","dog","lot","log","cog"});
+    List<String> wordList = Arrays.asList("hot","dot","dog","lot","log","cog");
     System.out.println(solution.ladderLength(beginWord, endWord, wordList));
 
     // Input:
@@ -45,7 +45,7 @@ public class WordLadder {
     // Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
     beginWord = "hit";
     endWord = "cog";
-    wordList = Arrays.asList(new String[]{"hot","dot","dog","lot","log"});
+    wordList = Arrays.asList("hot","dot","dog","lot","log");
     System.out.println(solution.ladderLength(beginWord, endWord, wordList));
   }
 

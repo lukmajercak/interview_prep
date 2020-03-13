@@ -64,10 +64,10 @@ public class LargestSumOfNonAdjacent {
       sumNextElem = sum(numbers, i + 1, memo);
     }
     if (i + 2 < numbers.length) {
-      sumSkipElem = sum(numbers, i + 2, memo);
+      sumSkipElem = currentValue + sum(numbers, i + 2, memo);
     }
 
-    int sumMax = Math.max(sumNextElem, currentValue + sumSkipElem);
+    int sumMax = Math.max(sumNextElem, sumSkipElem);
     memo.put(i, sumMax);
 
     return sumMax;
@@ -75,8 +75,8 @@ public class LargestSumOfNonAdjacent {
 
   static int sumBottomUp(int[] numbers) {
     for (int i = numbers.length - 2; i >= 0; i--) {
-      Integer sumNextElem = Integer.MIN_VALUE;
-      Integer sumSkipElem = Integer.MIN_VALUE;
+      int sumNextElem = Integer.MIN_VALUE;
+      int sumSkipElem = Integer.MIN_VALUE;
 
       if (i + 1 < numbers.length) {
         sumNextElem = numbers[i + 1];

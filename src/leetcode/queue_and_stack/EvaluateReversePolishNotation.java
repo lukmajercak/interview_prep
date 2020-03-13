@@ -96,16 +96,15 @@ public class EvaluateReversePolishNotation {
   public int evalRPNStack(String[] tokens) {
     Stack<Integer> results = new Stack<>();
 
-    for (int i = 0; i < tokens.length; i++) {
-      String next = tokens[i];
-      if (!isSign(next)) {
-        results.push(Integer.valueOf(next));
+    for (String token : tokens) {
+      if (!isSign(token)) {
+        results.push(Integer.valueOf(token));
       } else {
         int right = results.pop();
         int left = results.pop();
         int result = 0;
 
-        char c = next.charAt(0);
+        char c = token.charAt(0);
         if (c == '+') {
           result = left + right;
         }

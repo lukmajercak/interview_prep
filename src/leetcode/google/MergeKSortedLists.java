@@ -86,7 +86,7 @@ public class MergeKSortedLists {
     if (b == null) {
       return a;
     }
-    ListNode result = null;
+    ListNode result;
     if (a.val < b.val) {
       result = a;
       result.next = mergeTwoLists(a.next, b);

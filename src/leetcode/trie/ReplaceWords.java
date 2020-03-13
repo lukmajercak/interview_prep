@@ -37,7 +37,7 @@ public class ReplaceWords {
     int i = 0;
     TrieNode nextNode = trie.children.get(word.charAt(i));
     while (nextNode != null & i < word.length() - 1) {
-      if (nextNode.isWord) {
+      if (nextNode.word != null) {
         return i + 1;
       }
       i++;
@@ -59,7 +59,7 @@ public class ReplaceWords {
 
       int toKeep = charsMatched(word);
       if (toKeep != -1) {
-        outStr.append(word.substring(0, toKeep));
+        outStr.append(word, 0, toKeep);
       } else {
         outStr.append(word);
       }

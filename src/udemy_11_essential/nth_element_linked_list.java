@@ -1,7 +1,5 @@
 package udemy_11_essential;
 
-import java.util.Stack;
-
 public class nth_element_linked_list {
 
   public static void main(String[] args) {
@@ -66,7 +64,7 @@ public class nth_element_linked_list {
     Node current = head;
     StringBuilder sb = new StringBuilder();
     while (current != null) {
-      sb.append(String.valueOf(current.value));
+      sb.append(current.value);
       sb.append(" -> ");
       current = current.child;
     }

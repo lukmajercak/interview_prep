@@ -99,6 +99,6 @@ public class OneEditDistance {
       }
       bIndex++;
     }
-    return added || (!added && aIndex == a.length());
+    return added || aIndex == a.length();
   }
 }

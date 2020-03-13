@@ -162,7 +162,7 @@ public class MedianOfTwoSortedArrays {
       toBeBiggerThanOtherIndex--;
     }
 
-    boolean isBiggerThanElementsItShould = false;
+    boolean isBiggerThanElementsItShould;
     if (toBeBiggerThanOtherIndex < 0) {
       isBiggerThanElementsItShould = true;
     } else {
@@ -183,7 +183,7 @@ public class MedianOfTwoSortedArrays {
       toBeSmallerThanOtherIndex++;
     }
 
-    boolean isSmallerThanElementsItShould = false;
+    boolean isSmallerThanElementsItShould;
     if (toBeSmallerThanOtherIndex >= otherArray.length) {
       isSmallerThanElementsItShould = true;
     } else {
@@ -197,7 +197,7 @@ public class MedianOfTwoSortedArrays {
       return;
     }
 
-    medians.add(Double.valueOf(guess));
+    medians.add((double) guess);
     if (medians.size() == 2) {
       return;
     }

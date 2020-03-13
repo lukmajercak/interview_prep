@@ -93,8 +93,6 @@ public class ShortestDistanceFromAllBuildings {
     numReach = new int[numRows][numCols];
     distances = new int[numRows][numCols];
 
-    List<Position> houses = new ArrayList<>();
-
     int numBuildings = 0;
     for (int row = 0; row < numRows; row++) {
       for (int col = 0; col < numCols; col++) {
@@ -177,7 +175,7 @@ public class ShortestDistanceFromAllBuildings {
 
     @Override
     public int hashCode() {
-      return new String(this.row + "," + this.col).hashCode();
+      return (this.row + "," + this.col).hashCode();
     }
 
     @Override
@@ -191,7 +189,7 @@ public class ShortestDistanceFromAllBuildings {
 
     @Override
     public String toString() {
-      return new String("row: " + this.row + ", col: " + this.col);
+      return "row: " + this.row + ", col: " + this.col;
     }
   }
 }

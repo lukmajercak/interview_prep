@@ -72,7 +72,7 @@ public class NumberOfIslands {
 
     toCheck.offer(new Point(0, 0));
 
-    while(!toCheck.isEmpty()) {
+    while (!toCheck.isEmpty()) {
       Point point = toCheck.poll();
 
       if (visited.contains(point)) {
@@ -159,7 +159,7 @@ public class NumberOfIslands {
 
     @Override
     public int hashCode() {
-      return new String(String.valueOf(x) + "," + String.valueOf(y)).hashCode();
+      return (x + "," + y).hashCode();
     }
   }
 }

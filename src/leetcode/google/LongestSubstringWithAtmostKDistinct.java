@@ -6,7 +6,8 @@ import java.util.Map;
 public class LongestSubstringWithAtmostKDistinct {
 
   /**
-   * Given a string, find the length of the longest substring T that contains at most k distinct characters.
+   * Given a string, find the length of the longest substring T that contains at most k distinct
+   * characters.
    */
   public static void main(String[] args) {
     LongestSubstringWithAtmostKDistinct solution =
@@ -31,7 +32,7 @@ public class LongestSubstringWithAtmostKDistinct {
     int start = 0;
     int end = 0;
 
-    Integer maxLength = 0;
+    int maxLength = 0;
 
     HashMap<Character, Integer> numOccurrences = new HashMap<>();
 

@@ -146,7 +146,6 @@ public class KClosestPointsToOrigin {
         }
         if (rightChild != null && rightChild.distance > current.distance) {
           if (rightChild.distance > max) {
-            max = rightChild.distance;
             maxIndex = getRightIndex(currentIndex);
           }
         }

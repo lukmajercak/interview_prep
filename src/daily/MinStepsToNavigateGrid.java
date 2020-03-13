@@ -102,7 +102,7 @@ public class MinStepsToNavigateGrid {
   }
 
   List<Position> minStepsPath(boolean[][] board, Position start, Position end) {
-    List<Position> startPosPath = Arrays.asList(new Position[]{start});
+    List<Position> startPosPath = Collections.singletonList(start);
     if (start.equals(end)) {
       return startPosPath;
     }
@@ -180,8 +180,7 @@ public class MinStepsToNavigateGrid {
 
     @Override
     public int hashCode() {
-      return new String(String.valueOf(this.row) + "," +
-          String.valueOf(this.col)).hashCode();
+      return (this.row + "," + this.col).hashCode();
     }
 
     @Override

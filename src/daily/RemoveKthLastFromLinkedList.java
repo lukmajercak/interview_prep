@@ -86,7 +86,7 @@ public class RemoveKthLastFromLinkedList {
       StringBuilder str = new StringBuilder(Integer.toString(value));
       Node n = next;
       while (n != null) {
-        str.append("," + Integer.toString(n.value));
+        str.append(",").append(n.value);
         n = n.next;
       }
       return str.toString();

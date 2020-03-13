@@ -18,7 +18,7 @@ import java.util.Set;
 public class AddUpToK {
 
   public static void main(String[] args) {
-    List<Integer> numbers = new ArrayList();
+    List<Integer> numbers = new ArrayList<>();
     numbers.add(10);
     numbers.add(15);
     numbers.add(3);
@@ -31,7 +31,7 @@ public class AddUpToK {
     System.out.println(doAddUp(numbers, 7));
     System.out.println(doAddUp(numbers, 28));
 
-    numbers = new ArrayList();
+    numbers = new ArrayList<>();
     numbers.add(-3);
     numbers.add(5);
     numbers.add(0);
@@ -39,7 +39,7 @@ public class AddUpToK {
     System.out.println(doAddUp(numbers, 2));
     System.out.println(doAddUp(numbers, -3));
 
-    numbers = new ArrayList();
+    numbers = new ArrayList<>();
     numbers.add(-5);
     numbers.add(-6);
     numbers.add(-3);

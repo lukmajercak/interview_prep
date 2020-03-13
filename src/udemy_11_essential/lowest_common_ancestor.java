@@ -1,8 +1,6 @@
 package udemy_11_essential;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Stack;
 
 public class lowest_common_ancestor {
@@ -12,7 +10,7 @@ public class lowest_common_ancestor {
     // The mapping we're going to use for constructing a tree.
     // For example, {0: [1, 2]} means that 0's left child is 1, and its right
     // child is 2.
-    HashMap<Integer, int[]> mapping1 = new HashMap<Integer, int[]>();
+    HashMap<Integer, int[]> mapping1 = new HashMap<>();
     int[] childrenA = {1, 2};
     int[] childrenB = {3, 4};
     int[] childrenC = {5, 6};
@@ -30,7 +28,7 @@ public class lowest_common_ancestor {
     //     3  4 5  6
 
 
-    HashMap<Integer, int[]> mapping2 = new HashMap<Integer, int[]>();
+    HashMap<Integer, int[]> mapping2 = new HashMap<>();
     int[] childrenD = {1, 4};
     int[] childrenE = {3, 8};
     int[] childrenF = {9, 2};

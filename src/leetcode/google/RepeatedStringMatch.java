@@ -32,7 +32,7 @@ public class RepeatedStringMatch {
     String a = aStretched.toString();
     int index = a.indexOf(B);
     if (index == -1) {
-      index = new String(a + a).indexOf(B);
+      index = (a + a).indexOf(B);
       if (index == -1) {
         return -1;
       }

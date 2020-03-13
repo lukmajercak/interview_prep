@@ -1,7 +1,5 @@
 package sorting;
 
-import java.util.Arrays;
-
 import static sorting.QuickSort.quicksort;
 
 public class BinarySearch {

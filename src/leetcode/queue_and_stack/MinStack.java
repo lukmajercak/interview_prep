@@ -32,7 +32,7 @@ class MinStack {
     System.out.println(stack.getMin());
   }
 
-  Stack<NodeWithMin> stack = new Stack<>();
+  private Stack<NodeWithMin> stack = new Stack<>();
 
   public MinStack() {
   }

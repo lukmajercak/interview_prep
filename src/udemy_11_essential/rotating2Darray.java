@@ -6,21 +6,21 @@ public class rotating2Darray {
 
   public static void main(String[] args) {
     // NOTE: The following input values will be used for testing your solution.
-    int a1[][] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}};
+    int[][] a1 = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}};
     // rotate(a1, 3) should return:
     // [[7, 4, 1],
     //  [8, 5, 2],
     //  [9, 6, 3]]
     System.out.println(Arrays.deepToString(rotate(a1, 3)));
 
-    int a2[][] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12},
-        {13, 14, 15, 16}};
+    int[][] a2 = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}};
     // rotate(a2, 4) should return:
     // [[13, 9, 5, 1],
     //  [14, 10, 6, 2],
@@ -31,11 +31,11 @@ public class rotating2Darray {
 
   // Implement your solution below.
   public static int[][] rotate(int[][] a, int n) {
-    rotate(a, n, 0, n - 1);
+    rotate(a, 0, n - 1);
     return a;
   }
 
-  public static void rotate(int[][] a, int n, int startIndex, int endIndex) {
+  public static void rotate(int[][] a, int startIndex, int endIndex) {
     // 1 element subsquare
     if (startIndex >= endIndex) {
       return;
@@ -58,6 +58,6 @@ public class rotating2Darray {
 
       offset++;
     }
-    rotate(a, n, startIndex + 1, endIndex -1);
+    rotate(a, startIndex + 1, endIndex -1);
   }
 }

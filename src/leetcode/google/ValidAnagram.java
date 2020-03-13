@@ -37,7 +37,7 @@ public class ValidAnagram {
     }
 
     for (int i = 0; i < t.length(); i++) {
-      if (counts[t.charAt(i) - 'a']-- < 1) {
+      if (--counts[t.charAt(i) - 'a'] < 0) {
         return false;
       }
     }

@@ -124,7 +124,7 @@ public class AndroidUnlockPatterns {
         } else if (distance == 2) {
           // check if visited in path
 
-          boolean toAdd = false;
+          boolean toAdd;
           if (row == i) {
             // same row
             toAdd = visited[row][1];

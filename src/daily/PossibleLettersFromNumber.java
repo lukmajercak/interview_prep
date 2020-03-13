@@ -21,8 +21,8 @@ public class PossibleLettersFromNumber {
    */
   public static void main(String[] args) {
     Map<Character, List<Character>> mapping = new HashMap<>();
-    mapping.put('2', Arrays.asList(new Character[]{'a', 'b', 'c'}));
-    mapping.put('3', Arrays.asList(new Character[]{'d', 'e', 'f'}));
+    mapping.put('2', Arrays.asList('a', 'b', 'c'));
+    mapping.put('3', Arrays.asList('d', 'e', 'f'));
 
     System.out.println(possibleLetters(mapping, "23"));
     System.out.println(possibleLetters(mapping, "232"));
@@ -48,7 +48,7 @@ public class PossibleLettersFromNumber {
           results.add(newBuilder);
         }
       } else {
-        List<StringBuilder> newResults = new ArrayList(results.size() * possibleChars.size());
+        List<StringBuilder> newResults = new ArrayList<>(results.size() * possibleChars.size());
         for (StringBuilder result : results) {
           for (Character possibleChar : possibleChars) {
             StringBuilder newBuilder = new StringBuilder();

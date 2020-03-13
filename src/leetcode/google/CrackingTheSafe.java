@@ -38,7 +38,7 @@ public class CrackingTheSafe {
     System.out.println(solution.crackSafe(2, 2));
   }
 
-  Set<String> seen;
+  HashSet seen;
   StringBuilder ans;
 
   public String crackSafe(int n, int k) {

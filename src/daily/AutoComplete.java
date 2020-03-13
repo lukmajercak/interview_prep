@@ -13,11 +13,11 @@ public class AutoComplete {
    * For example, given the query string de and the set of strings [dog, deer, deal], return [deer, deal].
    */
   public static void main(String[] args) {
-    List<String> words = Arrays.asList(new String[]{"dog", "deer", "deal"});
+    List<String> words = Arrays.asList("dog", "deer", "deal");
     System.out.println(query("de", words));
     System.out.println(query("d", words));
 
-    words = Arrays.asList(new String[]{"dog", "deer", "deal", "rab", "rob", "rabs"});
+    words = Arrays.asList("dog", "deer", "deal", "rab", "rob", "rabs");
     System.out.println(query("de", words));
     System.out.println(query("d", words));
     System.out.println(query("r", words));

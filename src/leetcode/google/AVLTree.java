@@ -36,9 +36,7 @@ public class AVLTree {
       node.right = add(node.right, value, numSmaller);
 
       numSmaller.set(numSmaller.get() + size(node.left));
-      if (node.value != value) {
-        numSmaller.incrementAndGet();
-      }
+      numSmaller.incrementAndGet();
     }
 
     // 4. Update height of this node
@@ -83,7 +81,7 @@ public class AVLTree {
     //     B
     //  C     N
     //      br  nr
-    AVLNode newRootRight= null;
+    AVLNode newRootRight;
     AVLNode newRoot = node.left;
     try {
       newRootRight = newRoot.right;

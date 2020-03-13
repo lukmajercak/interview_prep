@@ -80,9 +80,7 @@ public class PlusOne {
     if (digitAndCarry.carry == 1) {
       int[] outputCopy = new int[output.length + 1];
       outputCopy[0] = 1;
-      for (int i = 0; i < output.length; i++) {
-        outputCopy[i + 1] = output[i];
-      }
+      System.arraycopy(output, 0, outputCopy, 1, output.length);
       return outputCopy;
     }
 

@@ -36,9 +36,9 @@ public class MinimumMeetingRooms {
   int numRooms(int[][] intervals) {
     List<Integer> starts = new ArrayList<>();
     List<Integer> ends = new ArrayList<>();
-    for (int numIntervals = 0; numIntervals < intervals.length; numIntervals++) {
-      starts.add(intervals[numIntervals][0]);
-      ends.add(intervals[numIntervals][1]);
+    for (int[] interval : intervals) {
+      starts.add(interval[0]);
+      ends.add(interval[1]);
     }
 
     Collections.sort(starts);

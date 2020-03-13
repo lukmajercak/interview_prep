@@ -46,7 +46,7 @@ public class UniqueEmailAddresses {
       int atSign = email.indexOf("@");
       int plusSign = email.indexOf("+");
 
-      String localName = null;
+      String localName;
       if (plusSign != -1) {
         localName = email.substring(0, plusSign);
       } else {
